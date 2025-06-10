@@ -1,0 +1,291 @@
+/* Generales */
+:root {
+    --naranja: #F5CD82; /* Un naranja claro agradable */ 
+    --blanco: #FFFFFF;
+    --amarillo: #F9F9B2; / * Amarillo claro para fondos o texto */
+    --gris-oscuro: #555555; /* Gris más oscuro para texto principal */
+    --verde-hover: #7ECBA6; /* Un verde ligeramente más oscuro para hover */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Impact, sans-serif;
+    line-height: 1.8;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado (Header) */
+header {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para hacerlo responsivo */
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.wolf-logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: garamond
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--amarillo);
+}
+
+/* Secciones de Contenido Principal */
+main {
+    padding: 20px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--amarillo);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.hero-section h2 {
+    color: var(--naranja);
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.student-song {
+    width: 80%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.content-section {
+    background-color: var(--blanco);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    color: var(--naranja);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--amarillo);
+    padding-bottom: 10px;
+}
+
+.content-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.content-section ul li::before {
+    content: '🍴'; /* Emoji de tenedor y cuchillo como viñeta */
+    position: absolute;
+    left: 0;
+    color: var(--naranja);
+}
+
+/* Botones de imagenes */
+.paw-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap; /* Para hacerlo responsivo */
+}
+
+.paw-button {
+    background-color: var(--naranja);
+    border: none;
+    border-radius: 50%; /* Para hacerlos circulares si la imagen no lo es */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Asegura que la imagen no se salga */
+}
+
+.paw-button img {
+    width: 70%; /* Ajusta el tamaño de la imagen dentro del botón */
+    height: 70%;
+    object-fit: contain;
+    filter: invert(100%); /* Hace la imagen blanca si es negra */
+    transition: transform 0.3s ease;
+}
+
+.paw-button:hover {
+    background-color: var(--verde-hover);
+    transform: translateY(-5px) scale(1.05); /* Ligeramente hacia arriba y un poco más grande */
+}
+
+.paw-button:hover img {
+    transform: rotate(10deg) scale(1.1); /* Gira y agranda la imagen */
+}
+
+/* Información al hacer clic en los botones */
+.info-content {
+    background-color: var(--blanco);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 150px; /* Para que no se colapse */
+}
+
+/* Formulario */
+#feedback-form {
+    background-color: var(--amarillo);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--gris-oscuro);
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--naranja);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#feedback-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+#feedback-form button {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+#feedback-form button:hover {
+    background-color: var(--verde-hover);
+}
+
+/* Pie de página (Footer) */
+footer {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .wolf-logo {
+        height: 50px;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    .paw-buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paw-button {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .paw-button {
+        width: 70px;
+        height: 70px;
+    }
+}
+

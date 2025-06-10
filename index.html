@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado Ambiental y Alimentación Sana - Plantel 20 del Valle</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> </head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Logo Mi Cocina Tu Casa" class="logo" width="100 height="100">
+            <h1>Plantel 20 Del Valle </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Inicio</a></li>
+                <li><a href="#entradas">Entradas</a></li>
+                <li><a href="#plato-fuerte">Plato Fuerte</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduccion" class="hero-section">
+            <h2>De mi Cocina a Tu Casa</h2>
+            <p>¡Bienvenid@ a nuestra página de delicias!</p>
+            <audio controls class="student-song">
+                <source src="himno.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+        <section id="botones-info">
+            <div class="paw-buttons-container">
+                <button class="paw-button" data-info="info-quiénes-somos">
+                    <img src="Quienes somos.png" alt="¿QUIÉNES-SOMOS?">
+                </button>
+                <button class="paw-button" data-info="info-horario">
+                    <img src="Horario.png" alt="HORARIO">
+                </button>
+                <button class="paw-button" data-info="info-redes">
+                    <img src="Redes.png" alt="REDES">
+                </button>
+                <button class="paw-button" data-info="info-especialidad">
+                    <img src="Especiales.png" alt="ESPECIALIDAD">
+                </button>
+                <button class="paw-button" data-info="info-colación">
+                    <img src="Colación.png" alt="COLACIÓN">
+                </button>
+            </div>
+            <div id="info-display" class="info-content">
+                <p>Haz clic en una imagen para decubrir.</p>
+            </div>
+        </section>
+        <section id="entradas" class="content-section">
+            <h2>Entradas</h2>
+            <p><b>Entradas para abrir el apetito:</b></p>
+            <ul>
+                <li>**Arroz** Hay arroz blanco y rojo, acompañado de plátano.</li>
+                <li>**Ensaladas** Tenemos ensalada César, Rusa, Nicoise.</li>
+                <li>**Cremas** De elote, zanahoria y chayote.</li>
+                <li>**Sopas** Contamos con sopa de verduras, de codito y consomé.</li>
+            </ul>
+        </section>
+
+        <section id="plato-fuerte" class="content-section">
+            <h2>Plato fuerte</h2>
+            <p><b>Los buenos hábitos alimenticios son escenciales para la alimentación y se ve reflejado en nuestros platillos:</b></p>
+            <ul>
+                <li>**Pechuga de pollo con ensalada** Puede ser acompañada por distintas salsas al gusto.</li>
+                <li>**Sandwich.** Con jamón, queso, lechuga, jitomate, aguacate, lo que se prefiera al gusto</li>
+                <li>**Filetes de pollo.**</li>
+                <li>**Albóndigas.**</li>
+            </ul>
+        </section>
+
+        <section id="postres" class="content-section">
+            <h2>Postres</h2>
+            <p>No puede faltar un rico postre después de una buena comida, siguiendo una buena alimentación con regularidad.</p>
+            <h3>Postres principales:</h3>
+            <ul>
+                <li>**Crepas de avena** Con frutas, miel, al gusto.</li>
+                <li>**Gelatina** De mosaico o algún sabor especial del día.</li>
+                <li>**Fruta** De temporada.</li>
+            </ul>
+        </section>
+
+        <section id="bebidas" class="content-section">
+            <h2>Bebidas</h2>
+            <p>Aquí te presentamos algunas de nuestras bebidas estrella:</p>
+            <ul>
+                <li>**Jugo de frutas.** Con o sin azúcar</li>
+                <li>**Agua natural o mineral.**</li>
+                <li>**Jugo verde.**</li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="content-section">
+            <h2>Contacto</h2>
+            <p>¡Tu opinión es muy importante para nosotros!</p>
+            <form id="feedback-form">
+                <label for="nombre">Nombre (opcional):</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="email">Email (opcional):</label>
+                <input type="email" id="email" name="email">
+
+                <label for="propuesta">Tu Propuesta/Comentario:</label>
+                <textarea id="propuesta" name="propuesta" rows="6" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Plantel 20 del Valle. Todos los derechos reservados.</p>
+        <p>Desarrollado por: Brenda Martínez Barrientos  Y Haniel D. Mendoza Monroy </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
